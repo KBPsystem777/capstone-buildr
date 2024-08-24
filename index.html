@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CapstoneBuildr</title>
+    <style>
+      /* Reset some basic elements */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      header {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+
+      .overview,
+      .portfolio,
+      .testimonials,
+      .contact,
+      .team,
+      .cta {
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #343a40;
+        border-bottom: 2px solid #17a2b8;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      ul li {
+        background: #17a2b8;
+        color: white;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .portfolio img {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 10rem;
+      }
+
+      .portfolio img:hover {
+        transform: scale(1.05);
+      }
+
+      .testimonials p {
+        font-style: italic;
+        background: #e9ecef;
+        padding: 15px;
+        border-left: 5px solid #17a2b8;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .contact form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact form input,
+      .contact form textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .contact form input[type="submit"] {
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact form input[type="submit"]:hover {
+        background-color: #138496;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .cta {
+        background-color: #17a2b8;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .cta h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .cta p {
+        font-size: 1.2rem;
+      }
+
+      .cta a {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #17a2b8;
+        padding: 10px 20px;
+        margin-top: 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta a:hover {
+        background-color: #f8f9fa;
+      }
+
+      .team {
+        text-align: center;
+      }
+
+      .team img {
+        width: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .team img:hover {
+        transform: scale(1.1);
+      }
+
+      .team h3 {
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+      }
+
+      .team p {
+        color: #6c757d;
+        font-size: 1rem;
+      }
+
+      .contact-link {
+        text-decoration: none;
+        font-weight: bolder;
+      }
+      .referral {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .referral h2 {
+        color: #17a2b8;
+      }
+      .referral p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+      .referral a {
+        display: inline-block;
+        background-color: #17a2b8;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .referral a:hover {
+        background-color: #138496;
+      }
+
+      .emphasis {
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Capstone Buildr</h1>
+        <p>Professional solutions crafted by a pro developer 💻</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="overview">
+        <h2>Overview of Services</h2>
+        <p>
+          Our offers a wide range of system development services tailored to
+          meet the specific needs of educational institutions. We specialize in:
+        </p>
+        <ul>
+          <li>Web3 and Blockchain applications</li>
+          <li>Capstone Projects for IT & CS Students</li>
+          <li>School, Home and Office Applications</li>
+          <li>Reservation, Booking, Admin and Mgmt Systems</li>
+        </ul>
+        <p>
+          But that’s not all! When we build something for you,
+          <span class="emphasis">you, own it 100%.</span>
+
+          <span class="emphasis"
+            >We take care of everything from start to finish</span
+          >
+          — coding, deployment, hosting, and delivering your application. You
+          don’t have to worry about a thing!
+        </p>
+        <p>
+          Our goal is to make your life easier. So just sit back, relax, and let
+          us handle the heavy lifting. We’ll build your application exactly how
+          you want it, and when it’s done, it’s all yours.
+          <span class="emphasis"
+            >No strings attached, no hidden fees — just great results and a
+            smooth process</span
+          >.
+        </p>
+        <p>
+          From concept to completion, we ensure each project is delivered with
+          the highest standards of quality and professionalism. Your success is
+          our success, and we’re excited to bring your ideas to life!
+        </p>
+      </section>
+
+      <section class="portfolio">
+        <h2>Portfolio</h2>
+        <p>Here are some examples of the projects we've completed:</p>
+        <div>
+          <img
+            src="/images/bdr-thermea.png"
+            alt="BDR Thermea"
+            onclick="window.open('https://bdrthermeagroup.com', '_blank');"
+          />
+          <img
+            src="/images/managelife.png"
+            alt="ManageLife"
+            onclick="window.open('https://managelife.io', '_blank');"
+          />
+          <img
+            src="/images/bge.png"
+            alt="BGE"
+            onclick="window.open('https://bge.com', '_blank');"
+          />
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>
+          "The reservation system they developed for our school is fantastic!
+          Easy to use and reliable." -
+          <strong>Jenna from Jose Rizal University</strong>
+        </p>
+        <p>
+          "I needed help with my capstone project, and they delivered beyond my
+          expectations." - <strong>Pat from DLSU</strong>
+        </p>
+        <p>
+          "Highly recommend their services to anyone in need of a well-designed
+          capstone projects." -
+          <strong>Dave from University of Santo Tomas</strong>
+        </p>
+      </section>
+
+      <section class="referral">
+        <h2>Referral Program</h2>
+        <p>
+          Know someone who could benefit from our services? Refer them to us,
+          and we'll reward you for helping us connect with new clients!
+        </p>
+        <p>
+          Simply share our contact information with potential clients, and if
+          they choose to work with us, you'll receive a commission 💰 as a thank
+          you for your referral.
+        </p>
+        <a href="mailto:web3fleet@gmail.com?subject=Referral%20Program"
+          >Refer Now 💰</a
+        >
+      </section>
+
+      <section class="cta">
+        <h3>Ready to start your project?</h3>
+        <p>
+          Contact us today to discuss your system development needs and see how
+          we can help you achieve your goals.
+        </p>
+        <a href="#contact">Get in Touch</a>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you're interested in our services or have any questions, feel free
+          to reach out to us via email or Twitter. We're here to help!
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:web3fleet@gmail.com" class="contact-link"
+            >web3fleet@gmail.com</a
+          >
+        </p>
+        <p>
+          <strong>Telegram:</strong>
+          <a href="https://t.me/kbpsystem" class="contact-link">@web3motors</a>
+        </p>
+        <p>
+          <strong>Twitter:</strong>
+          <a
+            href="https://twitter.com/yourtwitterhandle"
+            target="_blank"
+            class="contact-link"
+            >@web3motors</a
+          >
+        </p>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2024 CapstoneBuildr | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
