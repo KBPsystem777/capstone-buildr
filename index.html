@@ -411,7 +411,7 @@
         </p>
         <p>
           <strong>Telegram:</strong>
-          <a href="https://t.me/kbpsystem" class="contact-link">@web3motors</a>
+          <a href="https://t.me/kbpsystem" class="contact-link">@kbpsystem</a>
         </p>
         <p>
           <strong>Twitter:</strong>
@@ -425,7 +425,17 @@
       </section>
     </div>
     <footer>
-      <p>&copy; 2024 CapstoneBuildr | All Rights Reserved</p>
+      <p>
+        &copy; <span id="footerYear"></span> CapstoneBuildr | All Rights
+        Reserved
+      </p>
     </footer>
+
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear()
+      // Set the year in the footer
+      document.getElementById("footerYear").textContent = currentYear
+    </script>
   </body>
 </html>
